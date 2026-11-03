@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#29234f">
+  <meta name="description" content="Explore os signos, descubra o universo da astrologia e encontre uma pausa para olhar para si. Helyn, seu encontro com os astros.">
+  <title>Helyn — Seu encontro com os astros</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar container" aria-label="Navegação principal">
+      <a class="nav-link" href="#inicio">Menu</a>
+      <a class="nav-link" href="#descricoes">Descrições</a>
+      <a class="nav-link" href="#news">News <span class="nav-dot"></span></a>
+      <form class="search" role="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>
+        <input id="pesquisa" type="search" placeholder="Pesquisar signo..." aria-label="Pesquisar signo" autocomplete="off">
+      </form>
+      <a href="#inicio" class="brand" aria-label="Helyn, início">Helyn<span>✳</span></a>
+    </nav>
+  </header>
+  <main>
+    <section id="inicio" class="intro container">
+      <div class="eyebrow"><span class="tiny-star">✦</span> UM POUCO DE CÉU NO SEU DIA</div>
+      <div class="intro-row"><h1>O universo tem<br>um jeito de <em>guiar.</em></h1><div class="intro-aside"><span class="orbit-mark" aria-hidden="true">✧</span><p>Entre estrelas e possibilidades,<br>um espaço para se conhecer melhor.</p></div></div>
+      <div class="carousel" role="region" aria-roledescription="carrossel" aria-label="Explore o universo" tabindex="0">
+        <div class="slides">
+          <article class="slide active" aria-label="1 de 3" aria-roledescription="slide">
+            <img src="imagens/universo.svg" alt="Planeta roxo com anéis em um céu azul repleto de estrelas" fetchpriority="high">
+            <div class="slide-copy"><span class="tag">CONEXÕES CÓSMICAS</span><h2>Seu próximo capítulo<br>está nas estrelas.</h2><p>Olhe para o céu. Depois, olhe para dentro.</p><a class="light-button" href="#signos">Encontre seu signo <span>↗</span></a></div>
+          </article>
+          <article class="slide" aria-label="2 de 3" aria-roledescription="slide" hidden>
+            <img src="imagens/lua.svg" alt="Lua iluminada sobre montanhas em tons de azul e violeta">
+            <div class="slide-copy"><span class="tag">TEMPO DE RECOMEÇAR</span><h2>Respeite suas fases.<br>Assim como a Lua.</h2><p>Há beleza em cada novo começo.</p><a class="light-button" href="#descricoes">Explore a astrologia <span>↗</span></a></div>
+          </article>
+          <article class="slide" aria-label="3 de 3" aria-roledescription="slide" hidden>
+            <img src="imagens/constelacoes.svg" alt="Constelações luminosas desenhadas em um céu profundo violeta">
+            <div class="slide-copy"><span class="tag">SEU UNIVERSO PARTICULAR</span><h2>Existem infinitas<br>formas de ser você.</h2><p>Descubra os elementos que contam a sua história.</p><a class="light-button" href="#descricoes">Conheça os elementos <span>↗</span></a></div>
+          </article>
+        </div>
+        <div class="carousel-bottom"><div class="slide-indicators" aria-label="Escolher imagem"><button class="indicator active" aria-label="Mostrar imagem 1" aria-current="true"></button><button class="indicator" aria-label="Mostrar imagem 2"></button><button class="indicator" aria-label="Mostrar imagem 3"></button></div><div class="carousel-controls"><button id="pausar" aria-label="Pausar carrossel">Ⅱ</button><span id="slide-count">01 / 03</span><button id="anterior" aria-label="Imagem anterior">←</button><button id="proximo" aria-label="Próxima imagem">→</button></div></div>
+      </div>
+      <div class="under-hero"><span>UM CONVITE AO AUTOCONHECIMENTO</span><span>Astros, intuição e novas perspectivas <span class="tiny-star">✦</span></span></div>
+    </section>
+    <section id="signos" class="signs-section container">
+      <div class="section-heading"><div><div class="eyebrow">DOZE SIGNOS. INFINITAS POSSIBILIDADES.</div><h2>Qual é a sua <em>energia?</em></h2></div><p>Cada signo, um universo.<br>Encontre o seu e descubra mais.</p></div>
+      <div id="signos-grid" class="signs-grid"></div>
+      <p id="resultado-pesquisa" class="search-result" role="status" aria-live="polite"></p>
+    </section>
+    <section id="descricoes" class="elements-section"><div class="container"><div class="section-heading"><div><div class="eyebrow">PARA ENTENDER O SEU CÉU</div><h2>Tudo começa com<br>os <em>elementos.</em></h2></div><p>Quatro formas de sentir o mundo.<br>Uma nova maneira de olhar para você.</p></div><div class="elements-grid">
+      <article><span class="element-symbol">△</span><h3>Fogo</h3><span class="element-signs">Áries · Leão · Sagitário</span><p>Iniciativa, entusiasmo e vontade de explorar. A energia que transforma uma ideia no primeiro passo.</p></article>
+      <article><span class="element-symbol">♧</span><h3>Terra</h3><span class="element-signs">Touro · Virgem · Capricórnio</span><p>Presença, constância e conexão com o concreto. A energia de cultivar com cuidado o que importa.</p></article>
+      <article><span class="element-symbol">≋</span><h3>Ar</h3><span class="element-signs">Gêmeos · Libra · Aquário</span><p>Curiosidade, ideias e troca. A energia que abre novas perspectivas e aproxima diferentes mundos.</p></article>
+      <article><span class="element-symbol">☽</span><h3>Água</h3><span class="element-signs">Câncer · Escorpião · Peixes</span><p>Sensibilidade, imaginação e intuição. A energia que encontra profundidade nas pequenas coisas.</p></article>
+    </div></div></section>
+    <section id="news" class="news-section container"><div class="section-heading"><div><div class="eyebrow">NO NOSSO UNIVERSO</div><h2>Uma pausa para <em>descobrir.</em></h2></div><span class="news-label">NEWS & INSPIRAÇÃO ↗</span></div><div class="news-grid">
+      <article class="news-card"><img src="imagens/lua.svg" alt="Lua e paisagem azul" loading="lazy"><div class="news-copy"><span class="eyebrow">CICLOS & RITUAIS</span><h3>Cada fase, uma possibilidade</h3><p>Na astrologia, as fases da Lua simbolizam começos, expansão e reflexão. Que tal reservar alguns minutos para escrever suas intenções e observar o que está mudando em você?</p></div></article>
+      <article class="news-card"><img src="imagens/constelacoes.svg" alt="Estrelas conectadas formando constelações" loading="lazy"><div class="news-copy"><span class="eyebrow">ALÉM DO SIGNO SOLAR</span><h3>Você é um céu inteiro</h3><p>O signo solar é só uma parte do mapa astral. Na interpretação astrológica, Lua e ascendente também ajudam a explorar emoções, percepções e diferentes formas de se expressar.</p></div></article>
+    </div></section>
+    <aside class="closing container"><span aria-hidden="true">✳</span><p>O céu inspira.<br><em>Você escreve a sua história.</em></p></aside>
+  </main>
+  <footer class="footer container"><a class="brand" href="#inicio">Helyn<span>✳</span></a><p>Astrologia com leveza, curiosidade e um toque de universo.</p><small>Conteúdo de entretenimento e reflexão.</small></footer>
+  <dialog id="signo-dialog"><button class="dialog-close" aria-label="Fechar descrição">×</button><span id="dialog-symbol"></span><p id="dialog-dates" class="eyebrow"></p><h2 id="dialog-name"></h2><p id="dialog-description"></p><p id="dialog-reflection"></p><small>Uma inspiração para refletir, sem previsões deterministas.</small></dialog>
+</body>
+</html>
